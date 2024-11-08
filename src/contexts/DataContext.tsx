@@ -23,4 +23,4 @@ const DataContextProvider = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-export default DataContextProvider;
+export { DataContextProvider, DataContext };

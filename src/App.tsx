@@ -1,4 +1,4 @@
-import DataContextProvider from "./contexts/DataContext";
+import { DataContextProvider } from "./contexts/DataContext";
 
 import Summary from "@Pages/Summary";
 
