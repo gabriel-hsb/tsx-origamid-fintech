@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .box {
+    @apply p-2.5 rounded-[1.25rem] bg-color-5;
+  }
+}
