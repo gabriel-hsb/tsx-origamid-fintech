@@ -4,6 +4,28 @@
 
 @layer components {
   .box {
-    @apply p-2.5 rounded-[1.25rem] bg-color-5;
+    @apply p-2.5 rounded-[1.25rem] bg-white;
+  }
+
+  .flex-gap {
+    @apply flex gap-5;
+  }
+
+  .flex-gap > * {
+    @apply flex-1;
+  }
+
+  .container {
+    @apply grid gap-5 p-5;
+  }
+
+  button {
+    @apply cursor-pointer text-base;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-semibold;
   }
 }

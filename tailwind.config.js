@@ -2,14 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      "color-1": "#463220",
-      "color-2": "#66593c",
-      "color-3": "#eceadd",
-      "color-4": "#f7f8f5",
-      "color-5": "#fff",
+    extend: {
+      colors: {
+        "brown-main": "#463220",
+        "brown-light": "#66593c",
+        "cream-main": "#eceadd",
+        "cream-secondary": "#f7f8f5",
+      },
     },
-    extend: {},
   },
   plugins: [],
 };
