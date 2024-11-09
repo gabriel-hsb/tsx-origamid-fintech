@@ -4,15 +4,16 @@ import Summary from "@Pages/Summary";
 
 import Header from "@Components/Header";
 import SideNav from "@Components/SideNav";
+import Sales from "./Pages/Sales";
 
 function App() {
   return (
     <DataContextProvider>
-      Fintech!
       <SideNav />
       <main>
         <Header />
         <Summary />
+        <Sales />
       </main>
     </DataContextProvider>
   );

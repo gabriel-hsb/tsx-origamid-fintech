@@ -9,6 +9,9 @@ export default {
         "cream-main": "#eceadd",
         "cream-secondary": "#f7f8f5",
       },
+      gridTemplateColumns: {
+        "auto-auto-1fr": "auto auto 1fr",
+      },
     },
   },
   plugins: [],

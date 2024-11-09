@@ -46,7 +46,7 @@ const Summary = () => {
         </div>
       </div>
 
-      <div className="box">Gráficos</div>
+      <div className="mb-5 box">Gráficos</div>
     </section>
   );
 };
