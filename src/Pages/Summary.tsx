@@ -31,7 +31,7 @@ const Summary = () => {
     <section>
       <div className="mb-5 text-2xl font-semibold flex-gap">
         <div className="box">
-          <h2 className="mb-5 text-2xl text-brown-main">Sales</h2>
+          <h2 className="mb-5 text-2xl text-brown-main">Total Sales</h2>
           <span>{totalMonthSells}</span>
         </div>
 

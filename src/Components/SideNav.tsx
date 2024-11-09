@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import {
   ArrowUpDown,
   BadgeDollarSign,
@@ -19,18 +21,24 @@ const SideNav = () => {
             <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary ">
               <House />
             </span>
-            <a className="flex-1 px-6 py-2 text-xl text-brown-main" href="">
+            <NavLink
+              to="/"
+              className="flex-1 px-6 py-2 text-xl text-brown-main"
+            >
               Summary
-            </a>
+            </NavLink>
           </li>
 
           <li className="flex items-center gap-2 group">
             <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary ">
               <BadgeDollarSign />
             </span>
-            <a className="flex-1 px-6 py-2 text-xl text-brown-main" href="">
+            <NavLink
+              to="/sales"
+              className="flex-1 px-6 py-2 text-xl text-brown-main"
+            >
               Sales
-            </a>
+            </NavLink>
           </li>
 
           <li className="flex items-center gap-2 group">
