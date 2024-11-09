@@ -11,6 +11,7 @@ export default {
       },
       gridTemplateColumns: {
         "auto-auto-1fr": "auto auto 1fr",
+        "240px-auto": "240px auto",
       },
     },
   },

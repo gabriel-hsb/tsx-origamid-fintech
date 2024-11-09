@@ -9,12 +9,14 @@ import Sales from "./Pages/Sales";
 function App() {
   return (
     <DataContextProvider>
-      <SideNav />
-      <main>
-        <Header />
-        <Summary />
-        <Sales />
-      </main>
+      <div className="container">
+        <SideNav />
+        <main>
+          <Header />
+          <Summary />
+          <Sales />
+        </main>
+      </div>
     </DataContextProvider>
   );
 }
