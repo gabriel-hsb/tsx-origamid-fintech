@@ -2,8 +2,12 @@ type TypeSells = {
   id: string;
   nome: string;
   preco: number;
-  status: "pago" | "processando" | "falha";
-  pagamento: "boleto" | "cartao" | "pix";
+  status: TypeSellsStatus;
+  pagamento: TypeSellsPayments;
   parcelas: number | null;
   data: "string";
 };
+
+type TypeSellsStatus = "pago" | "processando" | "falha";
+
+type TypeSellsPayments = "boleto" | "cartao" | "pix";
