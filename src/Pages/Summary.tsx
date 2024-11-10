@@ -10,9 +10,9 @@ const Summary = () => {
   const totalMonthSells = context.fetchedData
     .filter((sell) => sell.status !== "falha")
     .reduce((acc, cur) => acc + cur.preco, 0)
-    .toLocaleString("pt-br", {
+    .toLocaleString("en-us", {
       style: "currency",
-      currency: "BRL",
+      currency: "USD",
     });
 
   const filterAndSumSales = (status: TypeSellsStatus) => {
@@ -21,9 +21,9 @@ const Summary = () => {
     return context.fetchedData
       .filter((sell) => sell.status === status)
       .reduce((acc, cur) => acc + cur.preco, 0)
-      .toLocaleString("pt-br", {
+      .toLocaleString("en-us", {
         style: "currency",
-        currency: "BRL",
+        currency: "USD",
       });
   };
 
@@ -32,17 +32,29 @@ const Summary = () => {
       <div className="mb-5 text-2xl font-semibold flex-gap">
         <div className="box">
           <h2 className="mb-5 text-2xl text-brown-main">Total Sales</h2>
-          <span>{totalMonthSells}</span>
+          {context.isLoading ? (
+            <span className="italic">Loading...</span>
+          ) : (
+            <span>{totalMonthSells}</span>
+          )}
         </div>
 
         <div className="box">
           <h2 className="mb-5 text-2xl text-brown-main">Received</h2>
-          <span>{filterAndSumSales("pago")}</span>
+          {context.isLoading ? (
+            <span className="italic">Loading...</span>
+          ) : (
+            <span>{filterAndSumSales("pago")}</span>
+          )}
         </div>
 
         <div className="box">
           <h2 className="mb-5 text-2xl text-brown-main">Pending</h2>
-          <span>{filterAndSumSales("processando")}</span>
+          {context.isLoading ? (
+            <span className="italic">Loading...</span>
+          ) : (
+            <span>{filterAndSumSales("processando")}</span>
+          )}
         </div>
       </div>
 

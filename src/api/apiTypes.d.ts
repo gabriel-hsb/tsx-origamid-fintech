@@ -8,6 +8,8 @@ type TypeSells = {
   data: "string";
 };
 
+type TypeSingleSell = Omit<TypeSells, "data">;
+
 type TypeSellsStatus = "pago" | "processando" | "falha";
 
 type TypeSellsPayments = "boleto" | "cartao" | "pix";

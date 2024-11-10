@@ -18,7 +18,6 @@ const useFetch = <T,>({ URL, OPTIONS }: useFetchProps): useFetchReturn<T> => {
 
   useEffect(() => {
     const fetchURL = async () => {
-      setFetchedData(null);
       setIsLoading(true);
       setError(null);
 

@@ -16,7 +16,7 @@
   }
 
   .container {
-    @apply grid gap-5 p-5 grid-cols-240px-auto;
+    @apply grid gap-5 p-5 grid-cols-240px-auto min-h-screen min-w-full;
   }
 
   button {

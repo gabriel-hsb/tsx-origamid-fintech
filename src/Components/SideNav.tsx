@@ -14,8 +14,12 @@ import FintechLogo from "@/assets/FintechLogo";
 const SideNav = () => {
   return (
     <aside className="bg-cream-main box">
-      <nav>
-        <FintechLogo className="mb-5" />
+      <nav className="sticky top-6">
+        <NavLink to="/">
+          <button>
+            <FintechLogo className="mb-5" />
+          </button>
+        </NavLink>
         <ul>
           <li className="flex items-center gap-2 group">
             <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary ">
@@ -49,7 +53,7 @@ const SideNav = () => {
               className="flex-1 px-6 py-2 text-xl text-brown-main"
               href="http://"
             >
-              Teste
+              Webhooks
             </a>
           </li>
 
@@ -61,7 +65,7 @@ const SideNav = () => {
               className="flex-1 px-6 py-2 text-xl text-brown-main"
               href="http://"
             >
-              Teste
+              Settings
             </a>
           </li>
 
@@ -73,19 +77,19 @@ const SideNav = () => {
               className="flex-1 px-6 py-2 text-xl text-brown-main"
               href="http://"
             >
-              Teste
+              Mail
             </a>
           </li>
 
           <li className="flex items-center gap-2 group">
-            <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary ">
+            <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary">
               <LogOut />
             </span>
             <a
               className="flex-1 px-6 py-2 text-xl text-brown-main"
               href="http://"
             >
-              Teste
+              Log Out
             </a>
           </li>
         </ul>

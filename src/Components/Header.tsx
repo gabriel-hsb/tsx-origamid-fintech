@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-
 import { useLocation } from "react-router-dom";
-import DateRange from "./DateRange";
-import Months from "./Months";
+
+import DateRange from "@Components/DateRange";
+import Months from "@Components/Months";
 
 const Header = () => {
   const [title, setTitle] = useState("Summary");
@@ -18,14 +18,13 @@ const Header = () => {
       case "/sales":
         setTitle("Sales");
         document.title = "Fintech | Sales";
-
         break;
     }
   }, [pathname]);
 
   return (
     <div className="mb-5">
-      <div className="grid grid-cols-2 mb-5 text-4xl">
+      <div className="grid grid-cols-2 gap-5 mb-5 text-4xl">
         <DateRange />
         <h1 className="box bg-cream-main">{title}</h1>
       </div>

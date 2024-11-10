@@ -15,6 +15,7 @@ const DateRange = () => {
         value={dataContext.startDate}
         onChange={({ target }) => dataContext.setStartDate(target.value)}
         label="Start"
+        max={daysAgo(0)}
       />
       <DateInput
         value={dataContext.endDate}

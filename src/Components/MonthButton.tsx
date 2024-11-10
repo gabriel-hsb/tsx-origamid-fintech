@@ -7,7 +7,7 @@ const monthName = (offset: number) => {
 
   now.setMonth(now.getMonth() + offset);
 
-  return new Intl.DateTimeFormat("pt-BR", {
+  return new Intl.DateTimeFormat("en-US", {
     month: "long",
   }).format(now);
 };
@@ -43,7 +43,7 @@ const MonthButton = ({ month }: { month: number }) => {
 
   return (
     <button
-      className="px-2 py-5 font-semibold capitalize border-none rounded-lg bg-cream-main text-brown-light"
+      className="px-2 py-5 font-semibold capitalize border-none rounded-[1.25rem] bg-cream-main text-brown-light"
       onClick={() => setMonth(month)}
     >
       {monthName(month)}
