@@ -10,7 +10,10 @@ const DateRange = () => {
   if (!dataContext) return null;
 
   return (
-    <form className="flex-gap box" onSubmit={(e) => e.preventDefault()}>
+    <form
+      className="grid-cols-1 md:flex-gap box"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <DateInput
         value={dataContext.startDate}
         onChange={({ target }) => dataContext.setStartDate(target.value)}
