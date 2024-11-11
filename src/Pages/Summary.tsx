@@ -2,6 +2,8 @@ import { useContext } from "react";
 
 import { DataContext } from "@/contexts/DataContext";
 
+import SalesGraph from "@/Components/SalesGraph";
+
 const Summary = () => {
   const context = useContext(DataContext);
 
@@ -58,7 +60,9 @@ const Summary = () => {
         </div>
       </div>
 
-      <div className="mb-5 box">Gráficos</div>
+      <div className="mb-5 box">
+        <SalesGraph fetchedData={context.fetchedData} />
+      </div>
     </section>
   );
 };
