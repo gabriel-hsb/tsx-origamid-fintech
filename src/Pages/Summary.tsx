@@ -61,7 +61,7 @@ const Summary = () => {
       </div>
 
       <div className="mb-5 box">
-        <SalesGraph fetchedData={context.fetchedData} />
+        <SalesGraph data={context.fetchedData} />
       </div>
     </section>
   );

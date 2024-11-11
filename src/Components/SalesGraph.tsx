@@ -1,36 +1,74 @@
-import { LineChart } from "lucide-react";
-import { CartesianGrid, Line, Tooltip, XAxis } from "recharts";
+import {
+  LineChart,
+  Legend,
+  Line,
+  Tooltip,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+} from "recharts";
 
-const graphData = [
-  {
-    data: "2024-10-01",
-    pago: 20000,
-    processando: 3000,
-    falha: 200,
-  },
-  {
-    data: "2024-10-02",
-    pago: 20010,
-    processando: 2990,
-    falha: 500,
-  },
-];
+type DailySale = {
+  data: string;
+  pago: number;
+  processando: number;
+  falha: number;
+};
 
-const SalesGraph = ({ fetchedData }: { fetchedData: TypeSells[] }) => {
+const salesPricesPerDay = (sales: TypeSells[]): DailySale[] => {
+  const days = sales.reduce((acc: { [key: string]: DailySale }, cur) => {
+    const day = cur.data.split(" ")[0];
+
+    if (!acc[day]) {
+      acc[day] = {
+        data: day,
+        pago: 0,
+        processando: 0,
+        falha: 0,
+      };
+    }
+
+    acc[day][cur.status] += cur.preco;
+
+    return acc;
+  }, {});
+
+  return Object.values(days).map((day) => ({
+    ...day,
+    data: day.data.substring(5),
+  }));
+};
+
+const SalesGraph = ({ data }: { data: TypeSells[] }) => {
+  const refinedData = salesPricesPerDay(data);
+
   return (
-    <LineChart
-      width={400}
-      height={400}
-      data={graphData}
-      margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-    >
-      <XAxis dataKey="data" />
-      <Tooltip />
-      <CartesianGrid stroke="#f5f5f5" />
-      <Line type="monotone" dataKey="pago" stroke="#ff7300" />
-      <Line type="monotone" dataKey="processando" stroke="#387908" />
-      <Line type="monotone" dataKey="falha" stroke="#000" />
-    </LineChart>
+    <ResponsiveContainer width="99%" height={400}>
+      <LineChart
+        width={730}
+        height={250}
+        data={refinedData}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      >
+        <XAxis dataKey="data" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="pago" stroke="#08792B" strokeWidth={3} />
+        <Line
+          type="monotone"
+          dataKey="processando"
+          stroke="#fbcb21"
+          strokeWidth={3}
+        />
+        <Line
+          type="monotone"
+          dataKey="falha"
+          stroke="#AD0116"
+          strokeWidth={3}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 
