@@ -1,26 +1,10 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import useTitle from "@/hooks/useTitle";
 
 import DateRange from "@Components/DateRange";
 import Months from "@Components/Months";
 
 const Header = () => {
-  const [title, setTitle] = useState("Summary");
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    switch (pathname) {
-      case "/":
-        setTitle("Summary");
-        document.title = "Fintech | Summary";
-        break;
-
-      case "/sales":
-        setTitle("Sales");
-        document.title = "Fintech | Sales";
-        break;
-    }
-  }, [pathname]);
+  const title = useTitle();
 
   return (
     <header className="mb-5">
