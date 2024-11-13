@@ -43,7 +43,7 @@ const MonthButton = ({ month }: { month: number }) => {
 
   return (
     <button
-      className="px-2 py-5 font-semibold capitalize border-none rounded-[1.25rem] bg-cream-main text-brown-light"
+      className="px-2 py-5 font-semibold capitalize border-none rounded-[1.25rem] bg-cream-main text-brown-light first:hidden first:md:block hover:brightness-[90%]"
       onClick={() => setMonth(month)}
     >
       {monthName(month)}

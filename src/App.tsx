@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <DataContextProvider>
-        <div className="container">
+        <div className="grid min-w-full min-h-screen grid-cols-1 gap-3 p-3 lg:p-5 lg:gap-5 md:grid-cols-240px-auto">
           <SideNav />
           <main>
             <Header />

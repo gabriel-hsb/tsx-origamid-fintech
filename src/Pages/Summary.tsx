@@ -31,7 +31,7 @@ const Summary = () => {
 
   return (
     <section>
-      <div className="flex-col mb-5 text-2xl font-semibold md:flex-gap md:flex-row">
+      <div className="flex flex-col gap-3 lg:gap-5 mb-5 text-2xl font-semibold [&_*]:flex-1 lg:flex-gap lg:flex-row">
         <div className="box">
           <h2 className="mb-5 text-2xl text-brown-main">Total Sales</h2>
           {context.isLoading ? (

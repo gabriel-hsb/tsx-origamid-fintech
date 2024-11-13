@@ -11,7 +11,7 @@ const DateRange = () => {
 
   return (
     <form
-      className="grid-cols-1 md:flex-gap box"
+      className="flex flex-col gap-3 md:flex-gap md:flex-row box lg:gap-5"
       onSubmit={(e) => e.preventDefault()}
     >
       <DateInput

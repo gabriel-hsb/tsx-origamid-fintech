@@ -1,11 +1,11 @@
 import {
-  LineChart,
   Legend,
   Line,
+  LineChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
-  ResponsiveContainer,
 } from "recharts";
 
 type DailySale = {
@@ -46,7 +46,7 @@ const SalesGraph = ({ data }: { data: TypeSells[] }) => {
     <ResponsiveContainer width="99%" height={400}>
       <LineChart
         width={730}
-        height={250}
+        height={350}
         data={refinedData}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >

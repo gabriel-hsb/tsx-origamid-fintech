@@ -26,14 +26,22 @@ const SaleId = () => {
 
   return (
     <div>
-      <div className="mb-5 box">ID: {fetchedData.id}</div>
-      <div className="mb-5 box">Name: {fetchedData.nome}</div>
-      <div className="mb-5 box">Price: {formatedPrice}</div>
       <div className="mb-5 box">
-        Status: <span className="capitalize">{fetchedData.status}</span>
+        <span className="font-bold">ID:</span> {fetchedData.id}
       </div>
       <div className="mb-5 box">
-        Payment: <span className="capitalize"> {fetchedData.pagamento}</span>
+        <span className="font-bold">Name:</span> {fetchedData.nome}
+      </div>
+      <div className="mb-5 box">
+        <span className="font-bold">Price:</span> {formatedPrice}
+      </div>
+      <div className="mb-5 box">
+        <span className="font-bold">Status:</span>{" "}
+        <span className="capitalize">{fetchedData.status}</span>
+      </div>
+      <div className="mb-5 box">
+        <span className="font-bold">Payment:</span>{" "}
+        <span className="capitalize"> {fetchedData.pagamento}</span>
       </div>
     </div>
   );
