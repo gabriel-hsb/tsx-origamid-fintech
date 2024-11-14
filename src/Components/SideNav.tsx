@@ -61,12 +61,12 @@ const SideNav = () => {
             <span className="flex items-center justify-center rounded-full group-hover:bg-cream-main size-8 bg-cream-secondary ">
               <Settings />
             </span>
-            <a
+            <NavLink
               className="flex-1 px-6 py-2 text-lg md:text-xl text-brown-main"
-              href="http://"
+              to="/settings"
             >
               Settings
-            </a>
+            </NavLink>
           </li>
 
           <li className="flex items-center gap-2 group">

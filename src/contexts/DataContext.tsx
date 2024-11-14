@@ -1,7 +1,7 @@
 import useFetch from "@/hooks/useFetch";
 import React, { createContext, useState } from "react";
 
-import { BASE_URL } from "@/api/apiConstants";
+import { BASE_SALES_URL } from "@/api/apiConstants";
 
 import { daysAgo } from "@/functions/daysAgo";
 
@@ -22,7 +22,7 @@ const DataContextProvider = ({ children }: React.PropsWithChildren) => {
   const [endDate, setEndDate] = useState(daysAgo(0));
 
   const { fetchedData, error, isLoading } = useFetch<TypeSells[]>({
-    URL: `${BASE_URL}/?inicio=${startDate}&final=${endDate}`,
+    URL: `${BASE_SALES_URL}/?inicio=${startDate}&final=${endDate}`,
   });
 
   return (

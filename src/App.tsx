@@ -3,9 +3,10 @@ import { DataContextProvider } from "./contexts/DataContext";
 
 import SaleId from "@/Pages/SaleId";
 import Sales from "@/Pages/Sales";
+import Settings from "@Pages/Settings";
 import Summary from "@Pages/Summary";
 
-import Header from "@Components/Header";
+import Header from "@Components/headerComponents/Header";
 import SideNav from "@Components/SideNav";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Summary />} />
               <Route path="/sales" element={<Sales />} />
               <Route path="/sales/:id" element={<SaleId />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </main>
         </div>

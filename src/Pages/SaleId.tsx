@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import { BASE_URL } from "@/api/apiConstants";
+import { BASE_SALES_URL } from "@/api/apiConstants";
 import useFetch from "@/hooks/useFetch";
 
 import Error from "@/Components/UI/Error";
@@ -10,7 +10,7 @@ const SaleId = () => {
   const { id } = useParams();
 
   const { fetchedData, error, isLoading } = useFetch<TypeSingleSell>({
-    URL: `${BASE_URL}/${id}`,
+    URL: `${BASE_SALES_URL}/${id}`,
   });
 
   const formatedPrice = fetchedData?.preco.toLocaleString("en-us", {

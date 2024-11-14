@@ -1,5 +1,5 @@
+import DateInput from "@Components/UI/DateInput";
 import { useContext } from "react";
-import DateInput from "./UI/DateInput";
 
 import { DataContext } from "@/contexts/DataContext";
 import { daysAgo } from "@/functions/daysAgo";
