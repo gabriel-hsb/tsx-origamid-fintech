@@ -7,10 +7,6 @@ import WeatherData from "./WeatherData";
 const Header = () => {
   const title = useTitle();
 
-  const location = navigator.geolocation;
-
-  console.log(location);
-
   return (
     <header className="mb-5">
       <div className="grid grid-cols-1 gap-3 mb-5 md:gap-5 lg:grid-cols-2">

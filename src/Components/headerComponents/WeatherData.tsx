@@ -1,12 +1,15 @@
 import { BASE_WEATHER_URL } from "@/api/apiConstants";
 import useFetch from "@/hooks/useFetch";
+import useGeoLocation from "@/hooks/useGeoLocation";
 
-const APIKEY = import.meta.env.VITE_WEATHER_API_KEY;
+const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 const WeatherData = () => {
   const { fetchedData, isLoading, error } = useFetch<TypeWeatherCurrent>({
-    URL: `${BASE_WEATHER_URL}?key=${APIKEY}&q=Boituva`,
+    URL: `${BASE_WEATHER_URL}?key=${WEATHER_API_KEY}&q=${"Boituva"}`,
   });
+
+  const foo = useGeoLocation();
 
   const tempC = fetchedData?.current.temp_c;
   const tempF = fetchedData?.current.temp_f;
